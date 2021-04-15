@@ -10,6 +10,8 @@ def twoSum(arr1, target):
             elements[item] = item
     return False
 
+# This is an O(N) Solution..
+
 
 target = 10
 sampleArray = [1, 4, 2, 5, 5, 2]
