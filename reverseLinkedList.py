@@ -8,7 +8,6 @@ def reverseLList(linkedList: LinkedList):
 
     # This step is also crucial
     linkedList.tail = head
-    print(linkedList.tail.next)
     first = head
     second = head.next
     while(second is not None):
@@ -19,8 +18,6 @@ def reverseLList(linkedList: LinkedList):
         # These are only for continuing the loop
         first = second
         second = temp
-    print(linkedList.tail.next)
-    print(first.next)
     linkedList.head.next = None
     linkedList.head = first
 
