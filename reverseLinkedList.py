@@ -41,9 +41,9 @@ testList = [2, 3, 4, 5, 6, 7, 8, 9]
 for num in testList:
     linkedList.append(Node(num))
 linkedList.printList()
+# Reverse using better solution
 reverseLList(linkedList)
 linkedList.printList()
-print(linkedList.head.value)
-
+# BruteForce Solution
 reverseLinkedList(linkedList)
 linkedList.printList()
