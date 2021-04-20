@@ -12,6 +12,26 @@ class BinarySearchTree:
     def __init__(self):
         self.root = None
 
+    def lookup(self, value):
+        currentNode = self.root
+        while True:
+            if(value == currentNode.value):
+                return currentNode
+
+            elif(currentNode.right is None and currentNode.left is None):
+                return 'NOT FOUND'
+            elif(value < currentNode.value and currentNode.left is not None):
+                currentNode = currentNode.left
+
+            elif (value < currentNode.value and currentNode.left is None):
+                return 'NOT FOUND'
+
+            elif(value > currentNode.value and currentNode.right is not None):
+                currentNode = currentNode.right
+
+            elif (value > currentNode.value and currentNode.right is None):
+                return "NOT FOUND"
+
     def insert(self, node: Node):
         if(self.root is None):
             self.root = node
@@ -51,3 +71,6 @@ bst.insert(Node(2))
 bst.insert(Node(4))
 bst.insert(Node(3))
 print(json.dumps(traverse(bst.root)))
+print(bst.lookup(3))
+print(bst.lookup(6))
+print(bst.lookup(1))
