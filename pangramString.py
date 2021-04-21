@@ -5,6 +5,9 @@
 #  English letters, return true if sentence is a pangram,
 #  or false otherwise.
 
+# Simple Solution
+# return len(set(s)) == 26
+
 def checkIfPangram(self, sentence: str) -> bool:
     uniqueCount = 0
     hashMap = {}
