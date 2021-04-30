@@ -5,6 +5,7 @@ class Graph:
 
     def addVertex(self, value):
         self.adjacentList[value] = []
+        self.numberOfNodes += 1
 
     def addEdges(self, node1, node2):
         if(node1 not in self.adjacentList or node2 not in self.adjacentList):
