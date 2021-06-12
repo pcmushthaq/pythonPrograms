@@ -19,5 +19,4 @@ savingAvailable = []
 for i in range(noOfVisit):
     amount = input()
     savingAvailable.append(int(amount))
-
 getResult(shopPrices, savingAvailable)
