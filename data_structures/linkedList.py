@@ -73,3 +73,12 @@ linkedList.insertAtIndex(1, Node(2))
 linkedList.printList()
 linkedList.remove(2)
 linkedList.printList()
+
+# Print in reverse
+
+
+def reversePrint(llist):
+    if(llist is None):
+        return
+    reversePrint(llist.next)
+    print(llist.data)
